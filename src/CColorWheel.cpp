@@ -4,6 +4,7 @@
 #include <CColorWheel.h>
 #include <CMathMacros.h>
 #include <CMathGen.h>
+#include <CRGBUtil.h>
 #include <cmath>
 
 CColorWheel::
