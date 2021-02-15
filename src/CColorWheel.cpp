@@ -394,16 +394,16 @@ rgbToPos(const CRGBA &rgb, CIPoint2D &wpos, CIPoint2D &spos) const
     spos.y = int(yc_ + (1 - 2*s)*tradius_);
   }
   else if (control_type_ == CONTROL_VALUE) {
-    double h = hsv.getHue() + 90;
+    double h1 = hsv.getHue() + 90;
 
-    if (h > 360)
-      h -= 360;
+    if (h1 > 360)
+      h1 -= 360;
 
-    double r = tradius_*s;
-    double a = DEG_TO_RAD(h);
+    double r1 = tradius_*s;
+    double a  = DEG_TO_RAD(h1);
 
-    wpos.x = int(xc_ + r*cos(a));
-    wpos.y = int(yc_ - r*sin(a));
+    wpos.x = int(xc_ + r1*cos(a));
+    wpos.y = int(yc_ - r1*sin(a));
 
     spos.y = int(yc_ + (1 - 2*v)*tradius_);
   }
