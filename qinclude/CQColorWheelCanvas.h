@@ -16,17 +16,17 @@ class CQColorWheelCanvas : public QWidget, public CColorWheel {
 
  ~CQColorWheelCanvas();
 
-  void paintEvent(QPaintEvent *e);
+  void paintEvent(QPaintEvent *e) override;
 
-  void mousePressEvent  (QMouseEvent *event);
-  void mouseMoveEvent   (QMouseEvent *event);
-  void mouseReleaseEvent(QMouseEvent *event);
+  void mousePressEvent  (QMouseEvent *event) override;
+  void mouseMoveEvent   (QMouseEvent *event) override;
+  void mouseReleaseEvent(QMouseEvent *event) override;
 
-  void setForeground(const CRGBA &rgba);
+  void setForeground(const CRGBA &rgba) override;
 
-  void drawPoint(const CIPoint2D &p);
-  void drawLine(const CIPoint2D &p1, const CIPoint2D &p2);
-  void fillRectangle(const CIBBox2D &rect);
+  void drawPoint(const CIPoint2D &p) override;
+  void drawLine(const CIPoint2D &p1, const CIPoint2D &p2) override;
+  void fillRectangle(const CIBBox2D &rect) override;
 
  private:
   CQColorWheel *wheel_;
