@@ -17,7 +17,7 @@ CColorWheel.cpp \
 OBJS = $(patsubst %.cpp,$(OBJ_DIR)/%.o,$(SRC))
 
 CPPFLAGS = \
--std=c++14 \
+-std=c++17 \
 -I. \
 -I$(INC_DIR) \
 -I../../CRenderer/include \
