@@ -16,7 +16,7 @@ class CQColorWheel : public QWidget {
   Q_OBJECT
 
  public:
-  CQColorWheel(QWidget *parent=0, Qt::Orientation orient=Qt::Vertical,
+  CQColorWheel(QWidget *parent=nullptr, Qt::Orientation orient=Qt::Vertical,
                int size=64, bool show_swatches=true);
  ~CQColorWheel();
 

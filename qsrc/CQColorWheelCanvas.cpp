@@ -1,12 +1,14 @@
 #include <CQColorWheelCanvas.h>
 #include <CQColorWheel.h>
 #include <CQUtil.h>
+#include <CQUtilRGBA.h>
+#include <CQUtilGeom.h>
 #include <QPainter>
 #include <QMouseEvent>
 
 CQColorWheelCanvas::
 CQColorWheelCanvas(CQColorWheel *wheel, int radius, COrientation orientation, bool show_swatches) :
- QWidget(0), CColorWheel(radius, orientation, show_swatches), wheel_(wheel)
+ QWidget(nullptr), CColorWheel(radius, orientation, show_swatches), wheel_(wheel)
 {
   setObjectName("canvas");
 
